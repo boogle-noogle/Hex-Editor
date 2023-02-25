@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Hex_Editor xil_defaultlib.Hex_Editor xil_defaultlib.glbl -log elaborate.log

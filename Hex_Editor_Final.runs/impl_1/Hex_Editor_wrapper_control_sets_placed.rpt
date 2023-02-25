@@ -1,0 +1,688 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Dec 16 22:11:14 2021
+| Host         : DESKTOP-QGPIJ3S running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Hex_Editor_wrapper_control_sets_placed.rpt
+| Design       : Hex_Editor_wrapper
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   610 |
+|    Minimum number of control sets                        |   610 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    50 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   610 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |   600 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              15 |            9 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              64 |           18 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            4831 |         1529 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+|              Clock Signal             |                       Enable Signal                       |                      Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+|  iClk_IBUF_BUFG                       |                                                           |                                                           |                3 |              3 |         1.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/num_capture_4bit_0/inst/rLED[3]_i_1_n_0      | Hex_Editor_i/num_capture_4bit_0/inst/rCntCurr[11]_i_1_n_0 |                1 |              4 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/num_capture_4bit_0/inst/rCntCurr[11]_i_2_n_0 | Hex_Editor_i/num_capture_4bit_0/inst/rCntCurr[11]_i_1_n_0 |                3 |              7 |         2.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[597]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[597][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[511]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[511][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[541]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[541][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[551]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[551][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[529]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[529][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[550]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[550][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[552]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[552][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[535]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[535][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[549]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[549][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[528]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[528][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[534]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[534][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[526]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[526][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[530]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[530][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[525]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[525][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[532]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[532][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[536]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[536][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[538]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[538][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[524]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[524][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[537]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[537][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[545]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[545][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[531]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[531][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[527]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[527][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[546]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[546][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[539]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[539][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[53]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[53][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[540]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[540][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[542]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[542][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[543]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[543][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[544]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[544][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[547]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[547][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[533]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[533][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[52]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[52][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[548]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[548][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[54]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[54][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[559]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[559][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[570]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[570][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[571]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[571][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[574]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[574][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[579]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[579][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[57]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[57][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[554]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[554][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[576]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[576][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[555]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[555][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[580]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[580][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[560]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[560][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[581]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[581][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[562]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[562][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[578]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[578][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[558]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[558][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[564]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[564][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[55]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[55][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[569]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[569][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[572]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[572][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[573]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[573][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[575]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[575][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[577]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[577][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[561]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[561][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[557]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[557][11]_i_1_n_0 |                8 |              8 |         1.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[563]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[563][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[56]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[56][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[553]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[553][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[556]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[556][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[567]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[567][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[565]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[565][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[566]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[566][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[568]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[568][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[589]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[589][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[63]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[63][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[599]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[599][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[68]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[68][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[587]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[587][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[5]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[5][11]_i_1_n_0   |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[60]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[60][11]_i_1_n_0  |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[584]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[584][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[588]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[588][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[594]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[594][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[140]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[140][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[61]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[61][11]_i_1_n_0  |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[69]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[69][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[6]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[6][11]_i_1_n_0   |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[58]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[58][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[592]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[592][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[67]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[67][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[59]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[59][11]_i_1_n_0  |                7 |              8 |         1.14 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[596]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[596][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[585]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[585][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[583]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[583][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[64]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[64][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[65]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[65][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[595]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[595][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[598]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[598][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[66]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[66][11]_i_1_n_0  |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[586]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[586][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[590]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[590][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[591]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[591][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[582]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[582][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[593]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[593][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[62]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[62][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[99]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[99][11]_i_1_n_0  |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[84]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[84][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[76]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[76][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[82]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[82][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[89]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[89][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[95]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[95][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[71]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[71][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[96]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[96][11]_i_1_n_0  |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[80]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[80][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[77]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[77][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[92]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[92][11]_i_1_n_0  |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[88]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[88][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[7]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[7][11]_i_1_n_0   |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[85]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[85][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[73]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[73][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[70]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[70][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[72]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[72][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[79]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[79][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[74]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[74][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[83]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[83][11]_i_1_n_0  |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[78]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[78][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[86]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[86][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[8]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[8][11]_i_1_n_0   |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[75]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[75][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[93]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[93][11]_i_1_n_0  |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[94]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[94][11]_i_1_n_0  |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[97]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[97][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[90]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[90][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[91]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[91][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[81]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[81][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[87]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[87][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[98]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[98][11]_i_1_n_0  |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[9]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[9][11]_i_1_n_0   |                8 |              8 |         1.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[504]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[504][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[146]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[146][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[149]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[149][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[130]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[130][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[129]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[129][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[136]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[136][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[143]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[143][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[13]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[13][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[138]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[138][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[148]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[148][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[152]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[152][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[153]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[153][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[128]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[128][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[134]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[134][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[133]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[133][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[151]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[151][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[137]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[137][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[141]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[141][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[12]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[12][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[135]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[135][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[144]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[144][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[50]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[50][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[145]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[145][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[147]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[147][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[150]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[150][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[139]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[139][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[154]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[154][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[155]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[155][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[156]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[156][11]_i_1_n_0 |                7 |              8 |         1.14 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[132]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[132][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[14]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[14][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[142]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[142][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[131]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[131][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[100]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[100][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[102]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[102][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[103]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[103][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[105]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[105][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[106]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[106][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[107]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[107][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[108]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[108][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[10]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[10][11]_i_1_n_0  |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[101]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[101][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[104]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[104][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[109]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[109][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[0]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[0][11]_i_1_n_0   |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[110]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[110][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[115]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[115][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[116]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[116][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[113]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[113][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[117]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[117][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[118]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[118][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[119]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[119][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[11]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[11][11]_i_1_n_0  |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[121]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[121][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[122]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[122][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[124]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[124][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[125]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[125][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[112]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[112][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[126]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[126][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[120]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[120][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[123]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[123][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[127]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[127][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[111]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[111][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[114]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[114][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[162]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[162][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[184]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[184][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[163]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[163][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[169]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[169][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[159]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[159][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[160]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[160][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[178]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[178][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[157]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[157][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[170]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[170][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[185]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[185][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[161]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[161][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[167]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[167][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[175]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[175][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[177]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[177][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[16]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[16][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[176]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[176][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[168]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[168][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[179]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[179][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[15]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[15][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[166]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[166][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[174]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[174][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[165]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[165][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[171]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[171][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[17]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[17][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[181]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[181][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[182]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[182][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[164]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[164][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[172]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[172][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[173]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[173][11]_i_1_n_0 |                7 |              8 |         1.14 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[158]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[158][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[180]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[180][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[183]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[183][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[198]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[198][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[199]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[199][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[200]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[200][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[195]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[195][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[18]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[18][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[202]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[202][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[207]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[207][11]_i_1_n_0 |                8 |              8 |         1.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[211]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[211][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[196]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[196][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[212]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[212][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[213]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[213][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[197]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[197][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[209]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[209][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[190]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[190][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[1]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[1][11]_i_1_n_0   |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[210]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[210][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[193]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[193][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[201]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[201][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[205]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[205][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[208]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[208][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[19]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[19][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[203]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[203][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[206]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[206][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[20]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[20][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[191]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[191][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[194]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[194][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[204]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[204][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[192]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[192][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[186]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[186][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[189]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[189][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[187]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[187][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[188]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[188][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[228]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[228][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[237]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[237][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[239]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[239][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[225]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[225][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[242]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[242][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[230]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[230][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[222]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[222][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[226]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[226][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[229]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[229][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[217]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[217][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[234]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[234][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[238]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[238][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[218]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[218][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[224]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[224][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[235]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[235][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[231]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[231][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[233]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[233][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[23]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[23][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[240]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[240][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[214]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[214][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[241]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[241][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[21]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[21][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[227]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[227][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[215]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[215][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[216]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[216][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[219]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[219][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[221]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[221][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[236]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[236][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[220]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[220][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[22]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[22][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[232]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[232][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[223]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[223][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[266]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[266][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[258]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[258][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[246]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[246][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[26]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[26][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[270]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[270][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[259]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[259][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[24]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[24][11]_i_1_n_0  |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[260]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[260][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[245]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[245][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[251]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[251][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[264]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[264][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[253]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[253][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[243]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[243][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[255]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[255][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[269]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[269][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[263]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[263][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[271]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[271][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[248]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[248][11]_i_1_n_0 |                7 |              8 |         1.14 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[257]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[257][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[261]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[261][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[25]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[25][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[265]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[265][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[268]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[268][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[262]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[262][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[267]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[267][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[249]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[249][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[256]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[256][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[252]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[252][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[244]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[244][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[250]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[250][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[247]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[247][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[254]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[254][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[298]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[298][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[28]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[28][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[299]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[299][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[27]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[27][11]_i_1_n_0  |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[285]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[285][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[272]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[272][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[292]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[292][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[29]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[29][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[273]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[273][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[2]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[2][11]_i_1_n_0   |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[281]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[281][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[277]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[277][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[288]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[288][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[289]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[289][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[293]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[293][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[280]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[280][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[286]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[286][11]_i_1_n_0 |                8 |              8 |         1.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[294]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[294][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[275]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[275][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[282]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[282][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[284]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[284][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[287]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[287][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[290]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[290][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[279]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[279][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[296]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[296][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[274]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[274][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[278]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[278][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[291]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[291][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[297]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[297][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[276]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[276][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[283]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[283][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[295]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[295][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[322]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[322][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[323]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[323][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[325]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[325][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[321]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[321][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[313]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[313][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[304]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[304][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[326]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[326][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[315]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[315][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[31]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[31][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[308]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[308][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[327]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[327][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[301]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[301][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[309]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[309][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[329]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[329][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[324]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[324][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[328]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[328][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[30]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[30][11]_i_1_n_0  |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[312]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[312][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[306]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[306][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[317]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[317][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[305]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[305][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[302]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[302][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[300]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[300][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[307]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[307][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[320]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[320][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[310]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[310][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[316]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[316][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[318]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[318][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[319]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[319][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[311]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[311][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[314]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[314][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[303]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[303][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[341]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[341][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[347]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[347][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[349]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[349][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[34]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[34][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[340]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[340][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[342]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[342][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[332]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[332][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[338]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[338][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[330]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[330][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[336]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[336][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[352]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[352][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[353]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[353][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[348]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[348][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[354]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[354][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[355]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[355][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[356]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[356][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[357]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[357][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[337]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[337][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[343]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[343][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[33]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[33][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[358]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[358][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[331]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[331][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[334]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[334][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[335]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[335][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[32]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[32][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[345]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[345][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[339]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[339][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[333]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[333][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[344]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[344][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[346]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[346][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[350]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[350][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[351]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[351][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[371]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[371][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[370]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[370][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[36]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[36][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[367]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[367][11]_i_1_n_0 |                7 |              8 |         1.14 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[375]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[375][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[377]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[377][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[378]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[378][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[37]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[37][11]_i_1_n_0  |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[366]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[366][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[35]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[35][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[373]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[373][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[380]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[380][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[381]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[381][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[382]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[382][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[368]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[368][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[372]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[372][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[383]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[383][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[374]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[374][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[360]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[360][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[376]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[376][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[384]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[384][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[385]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[385][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[386]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[386][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[379]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[379][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[387]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[387][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[359]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[359][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[362]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[362][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[361]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[361][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[364]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[364][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[363]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[363][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[365]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[365][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[369]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[369][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[407]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[407][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[409]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[409][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[411]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[411][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[413]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[413][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[395]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[395][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[414]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[414][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[389]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[389][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[398]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[398][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[415]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[415][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[391]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[391][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[397]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[397][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[392]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[392][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[400]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[400][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[396]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[396][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[399]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[399][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[393]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[393][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[406]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[406][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[40]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[40][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[394]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[394][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[388]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[388][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[412]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[412][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[38]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[38][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[402]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[402][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[403]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[403][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[408]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[408][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[410]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[410][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[390]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[390][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[3]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[15][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[404]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[404][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[405]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[405][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[39]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[39][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[401]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[401][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[437]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[437][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[416]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[416][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[418]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[418][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[438]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[438][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[433]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[433][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[439]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[439][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[43]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[43][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[440]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[440][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[420]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[420][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[428]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[428][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[419]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[419][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[42]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[42][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[430]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[430][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[431]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[431][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[432]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[432][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[427]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[427][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[436]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[436][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[41]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[41][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[441]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[441][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[424]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[424][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[421]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[421][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[429]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[429][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[425]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[425][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[422]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[422][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[442]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[442][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[417]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[417][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[443]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[443][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[444]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[444][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[434]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[434][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[423]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[423][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[435]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[435][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[426]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[426][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[465]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[465][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[467]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[467][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[462]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[462][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[470]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[470][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[472]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[472][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[447]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[447][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[461]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[461][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[473]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[473][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[471]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[471][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[455]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[455][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[458]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[458][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[453]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[453][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[446]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[446][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[454]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[454][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[457]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[457][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[452]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[452][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[463]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[463][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[448]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[448][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[466]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[466][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[449]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[449][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[456]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[456][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[459]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[459][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[460]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[460][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[468]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[468][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[469]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[469][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[46]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[46][11]_i_1_n_0  |                7 |              8 |         1.14 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[44]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[44][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[45]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[45][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[445]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[445][11]_i_1_n_0 |                8 |              8 |         1.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[450]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[450][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[451]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[451][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[464]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[464][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[497]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[497][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[496]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[496][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[493]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[493][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[495]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[495][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[479]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[479][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[483]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[483][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[484]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[484][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[47]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[47][11]_i_1_n_0  |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[500]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[500][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[477]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[477][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[474]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[474][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[485]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[485][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[488]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[488][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[490]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[490][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[491]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[491][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[48]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[48][11]_i_1_n_0  |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[475]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[475][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[480]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[480][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[489]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[489][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[492]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[492][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[494]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[494][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[498]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[498][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[49]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[49][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[4]0          | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[4][11]_i_1_n_0   |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[499]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[499][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[501]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[501][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[478]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[478][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[476]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[476][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[486]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[486][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[481]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[481][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[482]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[482][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[487]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[487][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[515]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[515][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[518]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[518][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[507]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[507][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[519]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[519][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[514]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[514][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[517]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[517][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[51]0         | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[51][11]_i_1_n_0  |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[520]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[520][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[509]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[509][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[506]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[506][11]_i_1_n_0 |                4 |              8 |         2.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[505]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[505][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[521]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[521][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[502]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[502][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[510]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[510][11]_i_1_n_0 |                6 |              8 |         1.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[508]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[508][11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[512]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[512][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[516]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[516][11]_i_1_n_0 |                1 |              8 |         8.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[523]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[523][11]_i_1_n_0 |                5 |              8 |         1.60 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[522]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[522][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[503]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[503][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/ScreenBufferMem_0/inst/rMem_reg[513]0        | Hex_Editor_i/ScreenBufferMem_0/inst/rMem[513][11]_i_1_n_0 |                2 |              8 |         4.00 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 |                                                           | Hex_Editor_i/VGA_timings_0/inst/r_CountH_Curr_reg/oY1     |                3 |             10 |         3.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/VGA_timings_0/inst/r_CountH_Curr_reg/E[0]    | Hex_Editor_i/VGA_timings_0/inst/r_CountV_Curr_reg/oY2     |                4 |             10 |         2.50 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 | Hex_Editor_i/num_capture_4bit_0/inst/oWe                  | Hex_Editor_i/num_capture_4bit_0/inst/wAddr                |                3 |             10 |         3.33 |
+|  Hex_Editor_i/clk_wiz_0/inst/clk_out1 |                                                           |                                                           |                6 |             12 |         2.00 |
+|  iClk_IBUF_BUFG                       |                                                           | Hex_Editor_i/Debounce_Switch_1/inst/p_0_in                |                5 |             18 |         3.60 |
+|  iClk_IBUF_BUFG                       |                                                           | Hex_Editor_i/Debounce_Switch_0/inst/p_0_in                |                5 |             18 |         3.60 |
+|  iClk_IBUF_BUFG                       |                                                           | Hex_Editor_i/Debounce_Switch_2/inst/p_0_in                |                5 |             18 |         3.60 |
++---------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+
+

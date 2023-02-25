@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Hex_Editor_Debounce_Switch_0_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_Debounce_Switch_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Hex_Editor_Debounce_Switch_1_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_Debounce_Switch_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Hex_Editor_Debounce_Switch_2_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_Debounce_Switch_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Hex_Editor_clk_wiz_0_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Hex_Editor_num_capture_4bit_0_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_num_capture_4bit_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Hex_Editor_ScreenBufferMem_0_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_ScreenBufferMem_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Hex_Editor_VGA_timings_0_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_VGA_timings_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Hex_Editor_VGA_pattern_0_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_VGA_pattern_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Hex_Editor_AsciiCharsMem_0_0_synth_1" LaunchDir="C:/Users/PsilosC/Desktop/Hex_Editor_Final/Hex_Editor_Final.runs/Hex_Editor_AsciiCharsMem_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

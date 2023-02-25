@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Hex_Editor": {
+			"proto_instances": {
+			}
+		}
+	}
+}

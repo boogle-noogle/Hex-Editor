@@ -1,0 +1,58 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.679452",
+   "Default View_TopLeft":"-165,-10",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port iClk -pg 1 -lvl 0 -x -40 -y 430 -defaultsOSRD
+preplace port iPush -pg 1 -lvl 0 -x -40 -y 350 -defaultsOSRD
+preplace port iStop -pg 1 -lvl 0 -x -40 -y 490 -defaultsOSRD
+preplace port iRst -pg 1 -lvl 0 -x -40 -y 400 -defaultsOSRD
+preplace port oHS -pg 1 -lvl 5 -x 1480 -y 310 -defaultsOSRD
+preplace port oVS -pg 1 -lvl 5 -x 1480 -y 340 -defaultsOSRD
+preplace port iSpace -pg 1 -lvl 0 -x -40 -y 460 -defaultsOSRD
+preplace portBus oLEDs -pg 1 -lvl 5 -x 1480 -y 560 -defaultsOSRD
+preplace portBus oBlue -pg 1 -lvl 5 -x 1480 -y 430 -defaultsOSRD
+preplace portBus oGreen -pg 1 -lvl 5 -x 1480 -y 400 -defaultsOSRD
+preplace portBus oRed -pg 1 -lvl 5 -x 1480 -y 370 -defaultsOSRD
+preplace inst Debounce_Switch_0 -pg 1 -lvl 1 -x 120 -y 300 -defaultsOSRD
+preplace inst Debounce_Switch_1 -pg 1 -lvl 1 -x 120 -y 540 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 120 -y 650 -defaultsOSRD
+preplace inst ScreenBufferMem_0 -pg 1 -lvl 3 -x 940 -y 440 -defaultsOSRD
+preplace inst AsciiCharsMem_0 -pg 1 -lvl 3 -x 940 -y 70 -defaultsOSRD
+preplace inst VGA_timings_0 -pg 1 -lvl 3 -x 940 -y 230 -defaultsOSRD
+preplace inst VGA_pattern_0 -pg 1 -lvl 4 -x 1280 -y 370 -defaultsOSRD
+preplace inst Debounce_Switch_2 -pg 1 -lvl 1 -x 120 -y 420 -defaultsOSRD
+preplace inst num_capture_4bit_0 -pg 1 -lvl 2 -x 650 -y 460 -defaultsOSRD
+preplace netloc clk_in1_0_1 1 0 1 0 290n
+preplace netloc i_Switch_0_1 1 0 1 -20J 310n
+preplace netloc i_Switch_0_3 1 0 1 -10J 490n
+preplace netloc clk_wiz_0_clk_out1 1 1 3 240 560 770 140 1140J
+preplace netloc iRst_0_1 1 0 4 -20J 710 260 570 790 320 N
+preplace netloc Debounce_Switch_0_o_Switch 1 1 1 250 300n
+preplace netloc Debounce_Switch_1_o_Switch 1 1 1 250 480n
+preplace netloc num_capture_4bit_0_oAddr 1 2 1 N 430
+preplace netloc num_capture_4bit_0_oData 1 2 1 N 450
+preplace netloc num_capture_4bit_0_oLEDs 1 2 3 780J 560 NJ 560 NJ
+preplace netloc ScreenBufferMem_0_oDataA 1 3 1 1140 420n
+preplace netloc VGA_timings_0_oHS 1 3 1 1120 200n
+preplace netloc VGA_timings_0_oVS 1 3 1 1090 220n
+preplace netloc VGA_timings_0_oCountH 1 3 1 1100 240n
+preplace netloc VGA_timings_0_oCountV 1 3 1 1080 260n
+preplace netloc num_capture_4bit_0_oWe 1 2 1 N 470
+preplace netloc VGA_pattern_0_oAddrB 1 2 3 800 0 NJ 0 1430
+preplace netloc AsciiCharsMem_0_oData 1 3 1 1130 70n
+preplace netloc VGA_pattern_0_oAddrA 1 2 3 800 330 1110J 240 1420
+preplace netloc VGA_pattern_0_oHS 1 4 1 1440J 310n
+preplace netloc VGA_pattern_0_oVS 1 4 1 1450J 340n
+preplace netloc VGA_pattern_0_oBlue 1 4 1 NJ 430
+preplace netloc VGA_pattern_0_oGreen 1 4 1 1440J 400n
+preplace netloc VGA_pattern_0_oRed 1 4 1 1460J 370n
+preplace netloc Debounce_Switch_2_o_Switch 1 1 1 230 420n
+preplace netloc i_Switch_0_2 1 0 1 10J 430n
+levelinfo -pg 1 -40 120 650 940 1280 1480
+pagesize -pg 1 -db -bbox -sgen -140 -20 1610 770
+"
+}
+0

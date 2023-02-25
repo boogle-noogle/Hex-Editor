@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Hex_Editor_Final.srcs/sources_1/bd/Hex_Editor/ipshared/8b3d" \
+"../../../../Hex_Editor_Final.srcs/sources_1/new/num_capture_4bit.v" \
+"../../../../Hex_Editor_Final.srcs/sim_1/new/num_capture_4bit_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
